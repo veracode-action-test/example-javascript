@@ -1,0 +1,31 @@
+name: Run action on commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-on-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create zip archive
+        run: zip -r veracode-artifact.zip . -x .git/**\* bin/**\* e2e/**\* tests/**\* node_modules/**\* *.pyd *.mwb *.exe *.dll *.bin *.png *.xml *.bat *.g2p *.gp4 *.wav *.jpg *.svg *.sfx *.prx *.sb *.nrm *.config *.ini *.pdf *.dat *.docx *.whl *.so *_arm64 *_armhf *_x64 *.xlsm *.sql
+
+      - name: Policy Scan
+        uses: veracode/uploadandscan-action@v0.2.2
+        id: upload_and_scan
+        with:
+          appname: "action-test/example-javascript"
+          createprofile: true
+          policy: ""
+          version: 28145163250-1
+          filepath: veracode-artifact.zip
+          vid: '${{ secrets.VERACODE_API_ID }}'
+          vkey: '${{ secrets.VERACODE_API_KEY }}'
+          scantimeout: 1
+          failbuild: false
+          deleteincompletescan: true
+          debug: false
+          createsandbox: false
