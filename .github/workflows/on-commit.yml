@@ -3,7 +3,7 @@ name: Run action on commit
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   run-on-commit:
