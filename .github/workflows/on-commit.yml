@@ -28,7 +28,7 @@ jobs:
           createprofile: true
           policy: ""
           version: 28145163250-1
-          filepath: ./veracode-upload
+          filepath: ./veracode-artifact.zip
           vid: 'e766657eb8a4ac4f026453d46358443a'
           vkey: '0e000c7b35a7e1ef45ea4e3dad071d0fb9c0df54c08641e9588623e238923ff957816cb5bc5e06bc7a18e506db25fc96271eba4af97ed17accbb5e6d941f12d2'
           scantimeout: 1
