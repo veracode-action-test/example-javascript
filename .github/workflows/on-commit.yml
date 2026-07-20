@@ -15,7 +15,7 @@ jobs:
       - name: Create zip archive
         run: zip -r veracode-artifact.zip . -x .git/**\* bin/**\* e2e/**\* tests/**\* node_modules/**\* *.pyd *.mwb *.exe *.dll *.bin *.png *.xml *.bat *.g2p *.gp4 *.wav *.jpg *.svg *.sfx *.prx *.sb *.nrm *.config *.ini *.pdf *.dat *.docx *.whl *.so *_arm64 *_armhf *_x64 *.xlsm *.sql
       
-      - name: Move artifact to upload folder
+      - name: Move artifact to upload folderr
         run: |
           mkdir -p veracode-upload
           mv veracode-artifact.zip veracode-upload/
