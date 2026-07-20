@@ -29,7 +29,7 @@ jobs:
         uses: veracode/uploadandscan-action@main-proxy
         id: upload_and_scan
         with:
-          appname: "action-test-v1/example-javascript"
+          appname: "action-test-v2/example-javascript"
           createprofile: true
           policy: ""
           version: 28145163250-1
