@@ -15,10 +15,10 @@ jobs:
       - name: Create zip archive
         run: zip -r veracode-artifact.zip . -x .git/**\* bin/**\* e2e/**\* tests/**\* node_modules/**\* *.pyd *.mwb *.exe *.dll *.bin *.png *.xml *.bat *.g2p *.gp4 *.wav *.jpg *.svg *.sfx *.prx *.sb *.nrm *.config *.ini *.pdf *.dat *.docx *.whl *.so *_arm64 *_armhf *_x64 *.xlsm *.sql
       
-      - name: Verify artifact
-        run: |
-          ls -lh veracode-artifact.zip
-          file veracode-artifact.zip
+      # - name: Verify artifact
+      #   run: |
+      #     ls -lh veracode-artifact.zip
+      #     file veracode-artifact.zip
           
       - name: Policy Scan
         uses: veracode/uploadandscan-action@v0.2.2
@@ -28,8 +28,7 @@ jobs:
           createprofile: true
           policy: ""
           version: 28145163250-1
-          filepath: "veracode-upload"
-          include: "veracode-artifact.zip"
+          filepath: ./veracode-upload
           vid: 'e766657eb8a4ac4f026453d46358443a'
           vkey: '0e000c7b35a7e1ef45ea4e3dad071d0fb9c0df54c08641e9588623e238923ff957816cb5bc5e06bc7a18e506db25fc96271eba4af97ed17accbb5e6d941f12d2'
           scantimeout: 1
