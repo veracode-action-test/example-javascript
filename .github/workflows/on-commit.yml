@@ -27,13 +27,13 @@ jobs:
           file veracode-upload/veracode-artifact.zip
           
       - name: Policy Scan
-        uses: veracode/uploadandscan-action@SDEVX-11627-debug
+        uses: veracode/uploadandscan-action@SDEVX-11627
         id: upload_and_scan
         with:
-          appname: "action-test-proxyQF-v8/example-javascript"
+          appname: "final-v1/example-javascript"
           createprofile: true
           policy: ""
-          version: 28145163250-v10
+          version: 28145163250-final-1
           filepath: "veracode-upload/veracode-artifact.zip"
           # filepath: "veracode-upload"
           # include: "veracode-artifact.zip"
