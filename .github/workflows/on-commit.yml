@@ -44,3 +44,4 @@ jobs:
           deleteincompletescan: true
           debug: false
           createsandbox: false
+          workflowApp: true
