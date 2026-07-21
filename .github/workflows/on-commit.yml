@@ -30,10 +30,10 @@ jobs:
         uses: veracode/uploadandscan-action@main-proxy
         id: upload_and_scan
         with:
-          appname: "action-test-proxyQF-v4/example-javascript"
+          appname: "action-test-proxyQF-v5/example-javascript"
           createprofile: true
           policy: ""
-          version: 28145163250-6
+          version: 28145163250-7
           filepath: "veracode-upload/veracode-artifact.zip"
           # filepath: "veracode-upload"
           # include: "veracode-artifact.zip"
@@ -44,3 +44,4 @@ jobs:
           deleteincompletescan: true
           debug: false
           createsandbox: false
+          workflowApp: false
