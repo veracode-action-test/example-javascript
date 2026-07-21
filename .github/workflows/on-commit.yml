@@ -30,10 +30,10 @@ jobs:
         uses: veracode/uploadandscan-action@SDEVX-11627-debug
         id: upload_and_scan
         with:
-          appname: "action-test-proxyQF-v6/example-javascript"
+          appname: "action-test-proxyQF-v7/example-javascript"
           createprofile: true
           policy: ""
-          version: 28145163250-v6
+          version: 28145163250-v7
           filepath: "veracode-upload/veracode-artifact.zip"
           # filepath: "veracode-upload"
           # include: "veracode-artifact.zip"
