@@ -32,7 +32,7 @@ jobs:
           appname: "action-test-proxyQF-v4/example-javascript"
           createprofile: true
           policy: ""
-          version: 28145163250-4
+          version: 28145163250-5
           filepath: "veracode-upload/veracode-artifact.zip"
           # filepath: "veracode-upload"
           # include: "veracode-artifact.zip"
